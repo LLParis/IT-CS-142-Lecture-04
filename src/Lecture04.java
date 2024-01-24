@@ -2,11 +2,22 @@
 Lecture 04
 London Paris
 */
+import java.util.*;
+
 public class Lecture04 {
     public static void printStrings(String s, int reps) {
+        for (int print = 0; print < reps; print++) {
+            System.out.print(s + " ");
+        }
     }
 
     public static void printGrid(int r, int c) {
+        for (int i = 1; i <= r; i++) {
+            for (int j = 0; j < c; j++) {
+                System.out.print(i + j * r + " ");
+            }
+            System.out.println();
+        }
     }
 
     public static void main(String[] args) {
@@ -88,36 +99,63 @@ public class Lecture04 {
         // NOTE: You'll need to write the method on, say, line 2
         // (i.e., outside of this main() method)
         // and then call that method right here
+        printStrings("abc", 5);
+        System.out.println();
 
         // Put your answer for #14 here:
         // (Do this like #4 - predict, write your prediction, run the code, then explain
         // any differences)
 
+        // 4 0
+        // 1 2 3
+        // 1 2
+        // 1 2 3
+        // 3 1
+        // 1 2 3
+
+        // I found out that the mystery function modifies local variables
+
         // Put your answer for #22A here:
+        // 34.50
 
         // Put your answer for #22B here:
+        // 6.0
 
         // Put your answer for #22C here:
+        // error
 
         // Put your answer for #22D here:
+        // error
 
         // Put your answer for #22E here:
+        // error
 
         // Put your answer for #22F here:
+        // error
 
         // Put your answer for #22G here:
+        // error
 
         // Put your answer for #22H here:
+        // 645.0
 
-        // Put your answer for #22 here:
+        // Put your answer for #24 here:
+        Scanner input = new Scanner(System.in);
+        System.out.println("What is the high?");
+        int high = input.nextInt();
+        System.out.println("What is the low?");
+        int low = input.nextInt();
 
         // EXERCISES:
 
         // Put your answer for #5 here:
+        printGrid(4, 6);
+
+
 
         // UNIT TESTS:
 
-        System.out.println("");
+        System.out.println("\n");
         System.out.println("Unit tests start here:");
 
         testPrintStringsHi3Times();
